@@ -8,7 +8,25 @@
 </head>
 <body>
     <h1>📚 Perpustakaan Digital</h1>
+    
+    <div class="add-book">
+        <input type="text" id="newTitle" placeholder="Judul Buku">
+        <input type="text" id="newAuthor" placeholder="Nama Penulis">
+        <button onclick="addBook()">Tambah Buku</button>
+        <button onclick="showAvailableBooks()">Lihat Buku Tersedia</button>
+    </div>
+
     <div class="book-list"></div>
+
+    <!-- Modal -->
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>📖 Buku yang Tersedia</h2>
+            <ul id="availableBooks"></ul>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
